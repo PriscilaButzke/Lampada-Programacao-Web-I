@@ -1,0 +1,91 @@
+
+
+body{
+    background-color: #E0FFFF;
+}
+#lampada {}
+
+#power {}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}        
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.l{
+    margin: 7px;
+    background-color: #40E0D0;
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    font-weight: 900;
+}
+
+
+
+
+
+        /*Botão liga/desliga*/
+
+/* Metodos para tornar invisivel a checkbox e a label*/
+.switch {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+  }
+  
+  .switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+
+  /* Define: tamanho, cor de fundo e aspecto arredondado.*/
+  .switch--shadow + label {
+    padding: 2px;
+    width: 120px;
+    height: 60px;
+    background-color: #dddddd;
+    border-radius: 60px;
+  }
+  /*Before: transição entre o cinza e o fundo verde
+    After: criar a bolinha  */
+  .switch--shadow + label:before,
+.switch--shadow + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: '';
+}
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: all 0.4s;
+}
+.switch--shadow + label:after {
+  width: 62px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+
+/*:checked, verifica se o input foi marcado ou não
+se o input foi marcado, mudar a cor e também move a bolinha para o lado.*/
+.switch--shadow:checked + label:before {
+    background-color: #8ce196;
+  }
+  .switch--shadow:checked + label:after {
+    transform: translateX(60px);
+  }
