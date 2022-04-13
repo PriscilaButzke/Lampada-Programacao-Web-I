@@ -1,41 +1,71 @@
 
-        const i = document.getElementById("img")
+        var i = document.getElementById("lampada").src;
+        var onoff = document.getElementById("on-off").src
+        const imgLigado = "./img/on.png"
+        const imgDesligado = "./img/off.png"
+
+
+
 
         function power(){
-            i.src = "img/acesa.png"
-            i.style.width= "300px"
+            i = document.getElementById("lampada").src;
+            onoff=document.getElementById("on-off").src
+
+            if(onoff.includes("off")){
+                console.log("if")
+                document.getElementById("lampada").src = "./img/branca.png"
+                document.getElementById("on-off").src = imgLigado
+            }else{
+                console.log("else")
+                document.getElementById("lampada").src = "./img/desligada.png"
+                document.getElementById("on-off").src = imgDesligado
+            }
         }
 
         function imgamarela() {
-            i.src = "img/amarela.webp"
-            i.style.width= "200px"
+            onoff = document.getElementById("on-off").src
+            i = document.getElementById("lampada").src;
+
+            if(onoff.includes("on")){
+                document.getElementById("lampada").src = "./img/amarela.png"
+            }
         }
 
         function imgvermelha() {
-            i.src = "img/vermelha.png"
-            i.style.height= "auto"
-            i.style.width= "250px"
+            onoff = document.getElementById("on-off").src
+            i = document.getElementById("lampada").src;
+
+            if(onoff.includes("on")){
+                document.getElementById("lampada").src = "./img/vermelha.png"
+            }
         }
 
         function imgazul() {
-            i.src ="img/azul.webp"
+            onoff = document.getElementById("on-off").src
+            i = document.getElementById("lampada").src;
+
+            if(onoff.includes("on")){
+                document.getElementById("lampada").src ="./img/azul.png"
+            }
         }
 
         function imgverde() {
-            i.src ="img/verde.png"
-            i.style.width= "250px"
-            
+            onoff = document.getElementById("on-off").src
+            i = document.getElementById("lampada").src;
+
+            if(onoff.includes("on")){
+                document.getElementById("lampada").src ="./img/verde.png"
+            }
         }
 
         function imglaranja() {
-            i.src = "img/laranja.webp"
-            i.style.width= "200px"
-            
-        }
+            onoff = document.getElementById("on-off").src
+            i = document.getElementById("lampada").src;
 
-        function imgbranca() {
-            i.src = "img/branca.png"
-            i.style.width= "400px"
+            if(onoff.includes("on")){
+                document.getElementById("lampada").src ="./img/laranja.png" 
+            }
         }
+        
 
         
